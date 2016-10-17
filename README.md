@@ -18,7 +18,7 @@ docker push bosyotech/pt-docker
 ```
 
 # Updating a previous docker image
-Follow instructions at (Build your own image)[https://docs.docker.com/engine/tutorials/dockerimages/]
+Follow instructions at [Build your own image](https://docs.docker.com/engine/tutorials/dockerimages/)
 
 # Running tests with Docker
 For running regression tests with [Docker](https://www.docker.com). This is a fully setup container environment. All you have to do is install docker and execute a command.
@@ -43,4 +43,4 @@ docker run -e RUN_TEST=false -it -v <path-to-pt-sources>:/home/percona/percona-t
 ```
 In this mode, you will have to manually run the tests. All files  are in */home/percona* directory.
 
-Find this tool at (bosyotech/pt-docker)[https://hub.docker.com/r/bosyotech/pt-docker/]
+Find this tool at [bosyotech/pt-docker](https://hub.docker.com/r/bosyotech/pt-docker/)
