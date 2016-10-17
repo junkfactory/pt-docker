@@ -16,10 +16,10 @@ fi
 
 if [[ ${RUN_TEST} = "true" ]]; then
     if [ -d "$PERCONA_TOOLKIT_BRANCH/sandbox" ]; then
+        TESTS="$@"
         if [ -z "$TESTS" ]; then
             TESTS=t/pt-*
         fi
-        TESTS="$@"
         echo "TESTS:$TESTS"
         prove -v $TESTS
         exec ./sandbox/test-env stop

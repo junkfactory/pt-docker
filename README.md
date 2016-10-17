@@ -32,7 +32,7 @@ docker run -v <path-to-pt-sources>:/home/percona/percona-toolkit bosyotech/pt-do
 ```
 docker run -v <path-to-pt-sources>:/home/percona/percona-toolkit bosyotech/pt-docker:latest t/pt-online-schema-change/rename_fk_constraints.t
 ```
-Note that you cannot interrupt the tests, *^C* will not work in this case. If you want to be able to terminate the tests, add *-it* to the command. 
+Note that you cannot interrupt the tests, *^C* will not work in this case. If you want to be able to terminate the tests, add *-it* to the command.
 ```
 docker run -it -v <path-to-pt-sources>:/home/percona/percona-toolkit bosyotech/pt-docker:latest t/pt-online-schema-change/rename_fk_constraints.t
 ```
