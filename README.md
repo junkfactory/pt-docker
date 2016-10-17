@@ -5,12 +5,11 @@ It is a docker container with percona 5.6.32 server. This is mainly used for dev
 1. Go to the pt-docker directory
 2. Execute docker build and take note of the build hash
 ```
-docker build --force-rm -t bosyotech/pt-docker:master .
+docker build --force-rm -t bosyotech/pt-docker:latest .
 ```
 3. Create tag for the release
 ```
-docker tag <buld-hash> bosyotech/pt-docker:1.0
-docker tag <buld-hash> bosyotech/pt-docker:latest
+docker tag <buld-hash> bosyotech/pt-docker:<major-version>.<minor-version>
 ```
 4. Push to docker hun
 ```
@@ -33,7 +32,7 @@ docker run -v <path-to-pt-sources>:/home/percona/percona-toolkit bosyotech/pt-do
 ```
 docker run -v <path-to-pt-sources>:/home/percona/percona-toolkit bosyotech/pt-docker:latest t/pt-online-schema-change/rename_fk_constraints.t
 ```
-Note that you cannot interrupt the tests, *^C* will not work in this case. If you want to be able to terminate the tests, add *-it* to the command. 
+Note that you cannot interrupt the tests, *^C* will not work in this case. If you want to be able to terminate the tests, add *-it* to the command.
 ```
 docker run -it -v <path-to-pt-sources>:/home/percona/percona-toolkit bosyotech/pt-docker:latest t/pt-online-schema-change/rename_fk_constraints.t
 ```
