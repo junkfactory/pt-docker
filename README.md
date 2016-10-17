@@ -5,11 +5,10 @@ It is a docker container with percona 5.6.32 server. This is mainly used for dev
 1. Go to the pt-docker directory
 2. Execute docker build and take note of the build hash
 ```
-docker build --force-rm -t bosyotech/pt-docker:master .
+docker build --force-rm -t bosyotech/pt-docker:<major>.<minor> .
 ```
-3. Create tag for the release
+3. Create tag for the build hash
 ```
-docker tag <buld-hash> bosyotech/pt-docker:1.0
 docker tag <buld-hash> bosyotech/pt-docker:latest
 ```
 4. Push to docker hun
